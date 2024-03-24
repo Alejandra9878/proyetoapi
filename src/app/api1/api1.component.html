@@ -1,0 +1,23 @@
+<p>api1 works!</p>
+<div class="container">
+    <h1 class="d-flex justify-content-center">Productos disponibles</h1>
+    <div class="row">
+        <div>
+            <a routerLink="../crearproducto">
+                Agregar productos
+            </a>    
+        </div>
+        <div class="col-md-3" *ngFor="let card of info; let i = index">
+            <br>
+            <article class="mb-5">
+                <img src="{{card.images[0]}}" class="imagen">
+                <p>{{card.title}}</p>
+                <p>${{card.price}}</p>
+                <button  class="bg-warning rounded-3 ml-3 p-2 px-4 border border-light">Editar</button>
+                <button (click)="eliminarProducto(card, card.id)" class="bg-danger text-light rounded-3 ml-2 p-2 px-4 border border-light" >eliminar </button>
+            </article>
+            <!-- Esto agrega un div abajo forzando un salto de línea -->
+            <div *ngIf="(i + 1) % 4 === 0" class="w-100"></div>
+        </div>
+    </div>
+</div>
