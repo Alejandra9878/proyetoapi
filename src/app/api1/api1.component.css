@@ -16,4 +16,85 @@
     align-items: center;
     border-radius: 50%;
     background-color: lightgray;
+    transition: background-color 0.3s;
 }
+* {
+    box-sizing: border-box;
+    font-family: 'work sans';
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px; /* Ajuste del margen superior */
+}
+
+.d-flex {
+    display: flex !important; /* Asegura que la clase d-flex tenga flex */
+}
+
+.justify-content-center {
+    justify-content: center !important; /* Centra horizontalmente el texto */
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important; /* Ajuste del margen inferior */
+}
+
+.ml-3 {
+    margin-left: 1rem !important; /* Ajuste del margen izquierdo */
+}
+
+.ml-2 {
+    margin-left: 0.5rem !important; /* Ajuste del margen izquierdo */
+}
+
+.p-2 {
+    padding: 0.5rem !important; /* Ajuste del relleno */
+}
+
+.px-4 {
+    padding-left: 1.5rem !important; /* Ajuste del relleno horizontal */
+    padding-right: 1.5rem !important;
+}
+
+.border {
+    border: 1px solid rgba(10, 2, 2, 0.808) !important; /* Añade un borde */
+}
+
+.bg-warning {
+    background-color: #fff !important; /* Color de fondo amarillo */
+    color: #1CB698 !important; /* Color del texto */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.bg-warning:hover {
+    background-color: #1CB698 !important; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.bg-danger {
+    background-color:  #fff !important;  /* Color de fondo rojo */
+    color: #1CB698 !important; /* Color del texto */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.bg-danger:hover {
+    background-color: #1CB698 !important; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.text-light {
+    color: #130202ea !important; /* Color de texto blanco */
+}
+
+.rounded-3 {
+    border-radius: 0.3rem !important; /* Borde redondeado */
+}
+
+.w-100 {
+    width: 100% !important; /* Ancho del 100% */
+}
+.circle-icon:hover {
+    background-color: #1CB698; /* Cambia el color de fondo al pasar el mouse */
+}
+
+

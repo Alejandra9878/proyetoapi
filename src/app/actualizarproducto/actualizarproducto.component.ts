@@ -3,40 +3,40 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from '../clases/Product';
 import { ServicService } from '../servic.service';
 import { Router } from '@angular/router';
+import { ProductPut } from '../clases/Productput';
 @Component({
-  selector: 'app-crearproducto',
-  templateUrl: './crearproducto.component.html',
-  styleUrls: ['./crearproducto.component.css']
+  selector: 'app-actualizarproducto',
+  templateUrl: './actualizarproducto.component.html',
+  styleUrls: ['./actualizarproducto.component.css']
 })
-export class CrearproductoComponent {
-
+export class ActualizarproductoComponent {
   datosUsuario: FormGroup
 
   constructor(private servicio: ServicService, private fb: FormBuilder, private router:Router ){
     this.datosUsuario = this.fb.group({
       title: ['', Validators.required],
       price: ['', Validators.required],
-      description: ['', Validators.required],
-      categoryId: ['', Validators.required]
+      id: ['', Validators.required],
+      
       
     })
 
-  }
-postMethod() {
-  const datos: Product = {
+}
+Actualizar() {
+  const datos: ProductPut = {
     title: this.datosUsuario.get('title')!.value,
     price: this.datosUsuario.get('price')!.value,
-    description: this.datosUsuario.get('description')!.value,
-    categoryId: this.datosUsuario.get('categoryId')!.value,
-    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Eiche_bei_Graditz.jpg/1920px-Eiche_bei_Graditz.jpg"]
+    id: this.datosUsuario.get('id')!.value,
   };   
 
 
   console.log(datos)
 
-this.servicio.postProduct(datos).subscribe((data: any) => {
+this.servicio.putProduct(datos.title,datos.price,datos.id).subscribe((data: any) => {
   console.log(data.id);
   this.router.navigate(['/inicio']);
       });
   }
+
+
 }

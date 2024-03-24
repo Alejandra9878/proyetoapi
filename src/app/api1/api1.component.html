@@ -1,11 +1,20 @@
-<p>api1 works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Título Aquí</title>
+    <!-- Agrega la siguiente línea para vincular tu archivo CSS -->
+    <link rel="stylesheet" href="api1.component.css">
+</head>
 <div class="container">
     <h1 class="d-flex justify-content-center">Productos disponibles</h1>
     <div class="row">
         <div>
             <a routerLink="../crearproducto">
                 Agregar productos
-            </a>    
+            </a>   
+            
         </div>
         <div class="col-md-3" *ngFor="let card of info; let i = index">
             <br>
@@ -13,7 +22,7 @@
                 <img src="{{card.images[0]}}" class="imagen">
                 <p>{{card.title}}</p>
                 <p>${{card.price}}</p>
-                <button  class="bg-warning rounded-3 ml-3 p-2 px-4 border border-light">Editar</button>
+                <button routerLink="../Actualizarproducto" class="bg-warning rounded-3 ml-3 p-2 px-4 border border-light">Editar</button>
                 <button (click)="eliminarProducto(card, card.id)" class="bg-danger text-light rounded-3 ml-2 p-2 px-4 border border-light" >eliminar </button>
             </article>
             <!-- Esto agrega un div abajo forzando un salto de línea -->

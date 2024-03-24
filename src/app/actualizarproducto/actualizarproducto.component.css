@@ -1,0 +1,62 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    font-family: 'work sans';
+    margin: 0;
+    padding: 0;
+}
+
+/* Clase para un ancho del 50% */
+.w-50 {
+    width: 50% !important;
+}
+
+/* Clase para centrar horizontalmente */
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Clase para margen superior */
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+/* Clase para margen inferior */
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+/* Clase para flexbox */
+.d-flex {
+    display: flex !important;
+    align-items: center;
+}
+
+/* Clase para alinear verticalmente elementos */
+.align-items-center {
+    align-items: center !important;
+}
+
+/* Enlaces con texto oscuro */
+.text-dark {
+    color: #000 !important;
+    text-decoration: none;
+}
+
+/* Estilo al pasar el mouse sobre enlaces */
+.text-dark:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Estilos de formulario */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.
+}

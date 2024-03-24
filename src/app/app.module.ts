@@ -7,12 +7,14 @@ import { Api1Component } from './api1/api1.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CrearproductoComponent } from './crearproducto/crearproducto.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ActualizarproductoComponent } from './actualizarproducto/actualizarproducto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Api1Component,
-    CrearproductoComponent
+    CrearproductoComponent,
+    ActualizarproductoComponent
   ],
   imports: [
     HttpClientModule,
