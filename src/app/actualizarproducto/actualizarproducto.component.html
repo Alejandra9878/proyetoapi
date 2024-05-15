@@ -13,12 +13,6 @@
         Volver
       </a>
       </div>
-    
-    <div class="form-group">
-      <label for="exampleInputiD">Id</label>
-      <input type="text" class="form-control" id="exampleInputid" formControlName="id" placeholder="id">
-      <span class="danger" *ngIf="datosUsuario.get('id')!.invalid && datosUsuario.get('id')!.touched">La Identificación es <strong>Obligatoria</strong></span>
-    </div>
     <div class="form-group">
       <label for="exampleInputTitle">Title</label>
       <input type="text" class="form-control" id="exampleInputTitle" formControlName="title" placeholder="Enter title">
@@ -30,6 +24,12 @@
       formControlName="price" placeholder="Price">
       <span class="danger" *ngIf="datosUsuario.get('price')!.invalid && datosUsuario.get('price')!.touched">La Identificación es <strong>Obligatoria</strong></span>
     </div>
+    <div class="form-group">
+      <label for="exampleInputimages">images</label>
+      <input type="text" class="form-control" id="exampleInputimages" 
+      formControlName="images" placeholder="images">
+      <span class="danger" *ngIf="datosUsuario.get('images')!.invalid && datosUsuario.get('images')!.touched">La Identificación es <strong>Obligatoria</strong></span>
+    </div>
     <br>
-    <button type="submit" class="btn btn-primary" [disabled]="datosUsuario.invalid">submit</button>
+    <button type="submit" class="btn btn-primary" >Guardar cambios</button>
   </form>

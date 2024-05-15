@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Título Aquí</title>
-    <!-- Agrega la siguiente línea para vincular tu archivo CSS -->
     <link rel="stylesheet" href="api1.component.css">
 </head>
-<div class="container">
-    <h1 class="d-flex justify-content-center">Productos disponibles</h1>
-    <div class="row">
-        <div>
-            <a routerLink="../crearproducto">
-                Agregar productos
-            </a>   
-            
-        </div>
-        <div class="col-md-3" *ngFor="let card of info; let i = index">
-            <br>
-            <article class="mb-5">
-                <img src="{{card.images[0]}}" class="imagen">
-                <p>{{card.title}}</p>
-                <p>${{card.price}}</p>
-                <button routerLink="../Actualizarproducto" class="bg-warning rounded-3 ml-3 p-2 px-4 border border-light">Editar</button>
-                <button (click)="eliminarProducto(card, card.id)" class="bg-danger text-light rounded-3 ml-2 p-2 px-4 border border-light" >eliminar </button>
-            </article>
-            <!-- Esto agrega un div abajo forzando un salto de línea -->
-            <div *ngIf="(i + 1) % 4 === 0" class="w-100"></div>
-        </div>
-    </div>
-</div>
+<body>
+    <div class="container">
+        <h1 class="d-flex justify-content-center">Productos disponibles</h1>
+        <button class="btn-agregar" routerLink="../crearproducto">Agregar producto</button>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let card of info; let i = index">
+                <br>
+                <article class="mb-5">
+                    <div class="text-center"> <!-- Centra la imagen e información -->
+                        <img src="{{card.images[0]}}" class="imagen">
+                        <p>{{card.title}}</p>
+                        <p>${{card.price}}</p>
+                        <button routerLink="../Actualizarproducto/{{card.id}}" class="bg-warning rounded-3 p-2 px-4 border border-light ml-3" (click)="edit(card.id, card.title)">Editar</button>
+                        <button (click)="eliminarProducto(card, card.id)" class="bg-danger text-light rounded-3 p-2 px-4 border border-light ml-2" (click)="delete()">Eliminar</button>
+                    </div>
+                </article>
+                <!-- Esto agrega un div abajo forzando un salto de línea -->
+                <div *ngIf="(i + 1) % 4 === 0" class="w-100"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

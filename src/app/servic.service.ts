@@ -13,7 +13,7 @@ export class ServicService {
 
   //Al parecer debo poner 470 para poder ver los productos creados(Como son muchos)
   getProduct(){
-    return this.http.get(`${this.URL}/products?offset=15&limit=20`);
+    return this.http.get(`${this.URL}/products?offset=0&limit=15`);
   }
 deleteProduct(product: Product, id:number){
   return this.http.delete(`${this.URL}/products/${id}`)
@@ -28,7 +28,7 @@ putProduct(title:string,price:number, id:number){
     title:title,
     price:price
   }
-console.log(this.datos)
+console.log(id)
   return this.http.put(`${this.URL}/products/${id}`, this.datos)
   }
 }

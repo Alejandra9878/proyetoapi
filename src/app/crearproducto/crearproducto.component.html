@@ -6,6 +6,9 @@
     <title>Tu Título Aquí</title>
     <!-- Agrega la siguiente línea para vincular tu archivo CSS -->
     <link rel="stylesheet" href="crearproducto.component.css">
+    <body>
+      
+  </body>
 </head>
 <form [formGroup]="datosUsuario" (ngSubmit)="postMethod()" class="w-50 mx-auto mt-5">
     <div class="mb-3 d-flex align-items-center">
@@ -17,6 +20,7 @@
       <label for="exampleInputTitle">Title</label>
       <input type="text" class="form-control" id="exampleInputTitle" formControlName="title" placeholder="Enter title">
       <span class="danger" *ngIf="datosUsuario.get('title')!.invalid && datosUsuario.get('title')!.touched">La Identificación es <strong>Obligatoria</strong></span>
+  
     </div>
     <div class="form-group">
       <label for="exampleInputPrice">Price</label>
@@ -33,6 +37,11 @@
       <input type="number" class="form-control" id="exampleInputCategoryId" formControlName="categoryId" placeholder="Category ID">
       <span class="danger" *ngIf="datosUsuario.get('categoryId')!.invalid && datosUsuario.get('categoryId')!.touched">La Identificación es <strong>Obligatoria</strong></span>
     </div>
+    <div class="form-group">
+      <label for="exampleInputimages">images</label>
+      <input type="text" class="form-control" id="exampleInputimages" formControlName="images" placeholder="images">
+      <span class="danger" *ngIf="datosUsuario.get('images')!.invalid && datosUsuario.get('images')!.touched">La Identificación es <strong>Obligatoria</strong></span>
+    </div>
     <br>
-    <button type="enviar" class="btn btn-primary" [disabled]="datosUsuario.invalid">enviar</button>
+    <button type="enviar" class="btn btn-primary" >enviar</button>
   </form>

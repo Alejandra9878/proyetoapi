@@ -7,7 +7,7 @@ import { ActualizarproductoComponent } from './actualizarproducto/actualizarprod
 const routes: Routes = [
   { path:'inicio', component:Api1Component },
   { path:'crearproducto', component:CrearproductoComponent},
-  { path:'Actualizarproducto', component:ActualizarproductoComponent},
+  { path:'Actualizarproducto/:id', component:ActualizarproductoComponent},
   { path:'', redirectTo:'inicio',pathMatch:'full'}
   
 ];

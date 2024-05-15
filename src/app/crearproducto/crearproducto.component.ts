@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Product } from '../clases/Product';
 import { ServicService } from '../servic.service';
 import { Router } from '@angular/router';
@@ -14,21 +14,21 @@ export class CrearproductoComponent {
 
   constructor(private servicio: ServicService, private fb: FormBuilder, private router:Router ){
     this.datosUsuario = this.fb.group({
-      title: ['', Validators.required],
-      price: ['', Validators.required],
-      description: ['', Validators.required],
-      categoryId: ['', Validators.required]
-      
+      title: new FormControl('', [Validators.required]),
+      price: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
+      categoryId: new FormControl('', [Validators.required]),
+      images: new FormControl('', [Validators.required]),
     })
 
   }
 postMethod() {
   const datos: Product = {
-    title: this.datosUsuario.get('title')!.value,
-    price: this.datosUsuario.get('price')!.value,
-    description: this.datosUsuario.get('description')!.value,
-    categoryId: this.datosUsuario.get('categoryId')!.value,
-    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Eiche_bei_Graditz.jpg/1920px-Eiche_bei_Graditz.jpg"]
+    title: this.datosUsuario.value.title,
+    price: this.datosUsuario.value.price,
+    description: this.datosUsuario.value.description,
+    categoryId: this.datosUsuario.value.categoryId,
+    images: [this.datosUsuario.value.images]
   };   
 
 

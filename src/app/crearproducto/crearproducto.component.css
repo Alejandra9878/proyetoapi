@@ -1,185 +1,119 @@
+body {
+    font-family: 'work sans';
+    margin: 0;
+    padding: 0;
+    background-color: #2314a3; /* Cambia el color de fondo según tu preferencia */
+}
+
+/* Estilos generales */
 * {
     box-sizing: border-box;
     font-family: 'work sans';
     margin: 0;
     padding: 0;
+    
 }
-
+/* Clase para un ancho del 50% */
 .w-50 {
-    width: 50% !important; /* Ancho del 50% */
+    width: 50% !important;
 }
 
+/* Clase para centrar horizontalmente */
 .mx-auto {
-    margin-left: auto !important; /* Margen izquierdo automático */
-    margin-right: auto !important; /* Margen derecho automático */
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
+/* Clase para margen superior */
 .mt-5 {
-    margin-top: 3rem !important; /* Ajuste del margen superior */
+    margin-top: 3rem !important;
 }
 
+/* Clase para margen inferior */
 .mb-3 {
-    margin-bottom: 1rem !important; /* Ajuste del margen inferior */
+    margin-bottom: 1rem !important;
 }
 
+/* Clase para flexbox */
 .d-flex {
-    display: flex !important; /* Asegura que la clase d-flex tenga flex */
-    align-items: center; /* Alinea verticalmente los elementos */
+    display: flex !important;
+    align-items: center;
 }
 
+/* Clase para alinear verticalmente elementos */
 .align-items-center {
-    align-items: center !important; /* Alinea verticalmente los elementos */
+    align-items: center !important;
 }
 
+/* Enlaces con texto oscuro */
 .text-dark {
-    color: #000 !important; /* Color de texto oscuro */
-    text-decoration: none; /* Quita la subrayado de los enlaces */
+    color: #000 !important;
+    text-decoration: none;
 }
+
+/* Estilo al pasar el mouse sobre enlaces */
+.text-dark:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Estilos de formulario */
 
 .form-group {
-    margin-bottom: 1rem; /* Ajuste del margen inferior */
+    margin-bottom: 1rem;
 }
 
 .form-control {
     display: block;
     width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 0.5rem; /* Ajusta el padding según desees */
+    font-size: 16px; /* Ajusta el tamaño de fuente según desees */
+    border: 1px solid #158d8d;
+    border-radius: 5px;
+    background-color: #cfcacac0; /* Color de fondo */
 }
 
-.form-control:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+.form-group label {
+    font-size: 20px; /* Ajusta el tamaño de fuente según desees */
+    font-weight: bold; /* Añade negrita si deseas */
+    color: #333; /* Color del texto */
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    padding: 1rem 2rem; /* Ajusta el padding según desees */
+    font-size: 18px; /* Ajusta el tamaño de fuente según desees */
+    color: #110303;
+    background-color: #6fc2c2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    color: #fff;
     background-color: #0056b3;
-    border-color: #0056b3;
+}
+/* Estilo para el contenedor de las imágenes */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan si no caben en una sola línea */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 20px; /* Espacio entre las imágenes */
 }
 
-.btn-primary:focus {
-    color: #fff;
-    background-color: #0056b3;
-    border-color: #0056b3;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+/* Estilo para cada columna */
+.col-md-3 {
+    flex: 0 0 calc(25% - 20px); /* Establece el ancho deseado para cada columna */
+    margin-bottom: 20px; /* Espacio entre cada fila de imágenes */
 }
 
-.btn-primary:disabled {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+/* Estilo para las imágenes */
+.imagen {
+    width: 100%; /* Ajusta el ancho de la imagen para ocupar todo el espacio disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
-.btn-primary:disabled:hover {
-    background-color: #007bff;
-    border-color: #007bff;
-}
 
-.danger {
-    color: #dc3545; /* Color de texto rojo */
-}
 
-.danger strong {
-    font-weight: bold; /* Establece la negrita */
-}
-.btn-primary {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
 
-.btn-primary:hover {
-    color: #fff;
-    background-color: #1CB698;
-    border-color: #1CB698;
-}
-
-.btn-primary:focus {
-    color: #fff;
-    background-color: #1CB698;
-    border-color: #1CB698;
-    box-shadow: 0 0 0 0.2rem rgba(28, 182, 152, 0.5);
-}
-
-.btn-primary:disabled {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-}
-
-.btn-primary:disabled:hover {
-    background-color: #007bff;
-    border-color: #007bff;
-}
-.mb-3 {
-    margin-bottom: 1rem !important; /* Ajuste del margen inferior */
-}
-
-.d-flex {
-    display: flex !important; /* Asegura que la clase d-flex tenga flex */
-    align-items: center; /* Alinea verticalmente los elementos */
-}
-
-.align-items-center {
-    align-items: center !important; /* Alinea verticalmente los elementos */
-}
-
-.text-dark {
-    color: #000 !important; /* Color de texto oscuro */
-    text-decoration: none; /* Quita la subrayado de los enlaces */
-}
-
-.text-dark:hover {
-    color: #333; /* Cambia el color al pasar el mouse */
-    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
-}
 

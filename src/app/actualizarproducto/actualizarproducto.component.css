@@ -1,9 +1,17 @@
+body {
+    font-family: 'work sans';
+    margin: 0;
+    padding: 0;
+    background-color: #2314a3; /* Cambia el color de fondo según tu preferencia */
+}
+
 /* Estilos generales */
 * {
     box-sizing: border-box;
     font-family: 'work sans';
     margin: 0;
     padding: 0;
+    
 }
 
 /* Clase para un ancho del 50% */
@@ -51,6 +59,7 @@
 }
 
 /* Estilos de formulario */
+
 .form-group {
     margin-bottom: 1rem;
 }
@@ -58,5 +67,31 @@
 .form-control {
     display: block;
     width: 100%;
-    padding: 0.
+    padding: 0.5rem; /* Ajusta el padding según desees */
+    font-size: 16px; /* Ajusta el tamaño de fuente según desees */
+    border: 1px solid #158d8d;
+    border-radius: 5px;
+    background-color: #cfcacac0; /* Color de fondo */
 }
+
+.form-group label {
+    font-size: 20px; /* Ajusta el tamaño de fuente según desees */
+    font-weight: bold; /* Añade negrita si deseas */
+    color: #333; /* Color del texto */
+}
+
+.btn-primary {
+    padding: 1rem 2rem; /* Ajusta el padding según desees */
+    font-size: 18px; /* Ajusta el tamaño de fuente según desees */
+    color: #110303;
+    background-color: #6fc2c2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+

@@ -4,8 +4,8 @@
 }
 
 .imagen{
-    width: 100%;
-    height: 150%;
+    width: 60%;
+    height: 60%;
 }
 
 .circle-icon {
@@ -58,43 +58,56 @@
     padding-right: 1.5rem !important;
 }
 
-.border {
-    border: 1px solid rgba(10, 2, 2, 0.808) !important; /* Añade un borde */
+/* Estilos para el título "Productos disponibles" */
+.container h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 30px; /* Espaciado inferior */
 }
 
-.bg-warning {
-    background-color: #fff !important; /* Color de fondo amarillo */
-    color: #1CB698 !important; /* Color del texto */
-    transition: background-color 0.3s; /* Transición suave del color de fondo */
-}
-
-.bg-warning:hover {
-    background-color: #1CB698 !important; /* Cambia el color de fondo al pasar el mouse */
-}
-
+/* Estilos para los botones "Editar" y "Eliminar" */
+.bg-warning,
 .bg-danger {
-    background-color:  #fff !important;  /* Color de fondo rojo */
-    color: #1CB698 !important; /* Color del texto */
-    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    color: #0e0606; /* Color del texto */
+    background-color: #27afaf; /* Color de fondo predeterminado */
+    border: 2px solid #000; /* Borde negro */
+    border-radius: 8px; /* Borde redondeado */
+    padding: 12px 24px; /* Ajusta el relleno para hacer los botones más grandes */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave del color de fondo y del sombreado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra predeterminada */
 }
 
+.bg-warning:hover,
 .bg-danger:hover {
-    background-color: #1CB698 !important; /* Cambia el color de fondo al pasar el mouse */
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Cambia el sombreado al pasar el mouse */
+}
+.btn-agregar {
+    display: block;
+    margin: 0 auto;
+    width: 200px; /* Ancho del botón */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 10px;
+    background-color: #36bdc2; /* Color de fondo del botón */
+    color: rgb(17, 5, 5); /* Color del texto */
+    border: 1px solid black;
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.text-light {
-    color: #130202ea !important; /* Color de texto blanco */
+.btn-agregar:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
 }
 
-.rounded-3 {
-    border-radius: 0.3rem !important; /* Borde redondeado */
+.imagen {
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    width: 400px; /* Ajusta el ancho de la imagen según sea necesario */
 }
 
-.w-100 {
-    width: 100% !important; /* Ancho del 100% */
+.text-center {
+    text-align: center; /* Centra el texto horizontalmente */
 }
-.circle-icon:hover {
-    background-color: #1CB698; /* Cambia el color de fondo al pasar el mouse */
-}
+
 
 

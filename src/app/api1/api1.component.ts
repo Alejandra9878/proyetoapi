@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { ServicService } from '../servic.service';
 import { Product } from '../clases/Product';
 @Component({
@@ -7,6 +7,15 @@ import { Product } from '../clases/Product';
   styleUrls: ['./api1.component.css']
 })
 export class Api1Component implements OnInit{
+
+  edit(id:number, title:string){
+    console.log(id)
+    console.log(title)
+  }
+
+  delete(){
+    console.log("borrando")
+  }
   info: any
   constructor(private servicio:ServicService){
 
@@ -25,7 +34,7 @@ export class Api1Component implements OnInit{
   }
   ngOnInit(): void {
     this.servicio.getProduct().subscribe(data => { 
-      console.log(data )
+      console.log(data)
       this.info = data
      
     })
