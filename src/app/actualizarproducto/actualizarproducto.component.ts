@@ -20,13 +20,22 @@ export class ActualizarproductoComponent {
       images: new FormControl('', [Validators.required]),
     })
 
-this.route.params.subscribe((value) => {
-  console.log(value)
-  this.idUsuario = value['id']
-})
-
   
-}
+
+    this.route.params.subscribe((value) => {
+      console.log(value)
+      this.idUsuario = value['id']
+    })
+  }
+
+  ngOnInit(){
+    this.servicio.getOneProduct (this.idUsuario).subscribe((element:any)=>{
+      console.log (element)
+      this.datosUsuario.controls["title"].setValue(element.title)
+      this.datosUsuario.controls["price"].setValue(element.price)
+      this.datosUsuario.controls["images"].setValue(element.images)
+    })
+  }
 Actualizar() {
   const datos: ProductPut = {
     id: this.datosUsuario.value.id,
